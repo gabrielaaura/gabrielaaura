@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url(../img/banner.png) center;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-child{
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 45px;
+    max-width: 510px;
+    text-align: center;
+    color: white;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+}
+
+.filtro input {
+    padding: 8px 15px;
+    width: 510px;
+    height: 37px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.gradient {
+   background: rgba(0, 0, 0, 0.4); 
+   background-image: linear-gradient(to top, rgba(0,0,0,.8)0, rgba(0,0,0,0) 60%, rgba(0,0,0,.8) 100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+
+.zigzag-container{
+    height: 400px;
+    width: 100%;
+}
+
+.zigzag-image{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.zigzag-image img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.zigzag-card{
+    background: white;
+    padding: 10px 15px;
+}
+
+.zigzag-content:hover{
+    box-shadow: 0 4px 20px 0 rgba(9, 188, 228, 0.2);
+}
+
+.zigzag-content{
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 324px;
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
+}
+
+.zigzag-text{
+    padding: 5px;
+}
+
+ .zigzag-text .artigos{
+    padding: 10px;
+    font-size: 0.875rem;   
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color:rgba(34, 68, 123, 0.2);
+    display: block;
+    text-decoration: none;
+}
+
+.zigzag-text h3 { 
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+.zigzag-text .descricao { 
+    padding: 2px;
+    font-size: 12px; 
+    line-height: 1.2rem;
+    margin: 0;
+}
+

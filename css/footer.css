@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+.artigos{
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(0,0,0,.7);
+    font-size: 30px;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+.artigos-title{
+    padding-top: 20px;
+    margin: 0 30px;
+}
+
+.footer-row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.footer{
+    background-color: #00a2c6;
+    margin: 0;
+    padding:  70px 0;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer-col{
+    width: 33%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-col .footer-logo{
+    padding: 50px 20px;
+    height: 200px;
+    width: 150px;
+}
+
+.footer-col .atalhos-col{
+    width: 33%;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+.footer-col ul li a:hover{
+    margin-left: 8px;
+    background-color: #00a2c6;
+}
+
+.footer-col .contatos a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    color: #00a2c6;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .contatos a:hover{
+    color: white;
+    
+}
+
