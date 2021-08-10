@@ -90,21 +90,21 @@
     background-color: #00a2c6;
 }
 
+
 .footer-col .contatos a{
     display: inline-block;
     height: 40px;
     width: 40px;
-    color: #00a2c6;
+    color: rgba(3, 106, 129, 0.6);
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: white;
     transition: all 0.5s ease;
 }
 
 .footer-col .contatos a:hover{
     color: white;
-    
 }
 

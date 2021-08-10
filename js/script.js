@@ -22,4 +22,5 @@ $('.zigzag-container').slick({
     ]
   });
 
-  
+
+
