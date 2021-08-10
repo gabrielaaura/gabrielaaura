@@ -123,7 +123,7 @@
     width: 60%;
 }
 
-/* .midias-sociais{
+.midias-sociais{
     margin: 0.50rem 0;
 }
 
@@ -150,11 +150,12 @@
 
 }
 
-/* .link-social-media a:hover{
+ .link-social-media a:hover{
     background-color: transparent;
-} */
+    border-radius: 15px;
+} 
 
-  .item-socialMidia{
+.item-socialMidia{
     border: 1px solid #bdc3c7;
     border-radius: 50%;
     width: 35px;
@@ -163,13 +164,11 @@
     text-align: center;
     display: inline-block;
     color: #95a5a6;
-    background-color: transparent;
-} 
+}
 
-/* .item-socialMidia a:hover {
+.item-socialMidia a:hover {
     color: #95a5a6;
-    background-color: transparent;
-}  */
+}
 
 
 form{
