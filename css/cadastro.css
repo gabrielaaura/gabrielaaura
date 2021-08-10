@@ -78,13 +78,13 @@
     color: #7f8c8d;
 }
 
-.btn{
+.container-cadastro .btn{
     border-radius: 15px;
     text-transform: uppercase;
     color: white;
     font-size: 10px;
     margin-top: 10px;
-    padding: 10px 50px;
+    padding: 10px 0px;
     font-weight: bold;
     width: 150px;
     align-self: center;
@@ -92,25 +92,25 @@
     text-align: center;
 }
 
-.btn-primary{
+.container-cadastro .btn-primary{
     background-color: transparent;
     border: 1px solid white;
     transition: .5s;
 }
 
-.btn-primary:hover{
+.container-cadastro .btn-primary:hover{
     background-color: white;
     color: #09bce4;
 }
 
-.btn-second{
+.container-cadastro .btn-second{
     background-color: #09bce4;
     border: 1px solid #09bce4;
     transition: .5s;
     
 }
 
-.btn-second:hover{
+.container-cadastro .btn-second:hover{
     background-color: white;
     border: 1px solid #09bce4;
     color: #09bce4;
@@ -187,6 +187,10 @@ form a:hover{
     background-color: #ecf0f1;
     width: 100%;
 
+}
+
+.form input:focus{
+    outline: none;
 }
 
 .label-input {

@@ -33,7 +33,7 @@ nav ul li a {
     border-radius: 3px ;
 }
 
- a.active,a:hover{
+ nav a.active, nav a:hover{
     background: #09bce4 ;
     transition: .5s;
 } 
