@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+
+:root{
+    --header-heigth:3rem;
+    --nav-width: 324px;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    --azul-claro: #09bce4;
+    --azul-escuro: #00a2c6;
+    --cinza-claro:#95a5a6;
+    --cinza-medio:#7f8c8d;
+    --cinza-escuro: #34495e;
+
+    --body-font: font-family: 'Oswald', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size:.938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root{
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    }
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-heigth) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background-color: white;
+    color: var(--cinza-medio);
+    line-height: 1.6;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+}
+
+h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cinza-escuro);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section .perfil{
+    padding: 4 rem 0 2rem;
+}
+
+.section-title{
+    font-size: var(--h1-font-size);
+    color: var(--cinza-escuro);
+    margin-bottom: var(--mb-3);
+    text-align: center;
+}
+
+.section-subtitle{
+    display: block;
+    font: var(--small-font-size);
+    color: var(--cinza-medio);
+    text-align: center;
+    font-weight: var(--font-bold);
+    margin-bottom: .25rem;
+}
