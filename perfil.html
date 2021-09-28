@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="bootstrap-5.1.0-dist/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav>
@@ -21,23 +24,53 @@
                      <li><img class="logo" src="img/logo.png"></li>
                  </ul>
                  <ul style="float: right;">
-                     <li><a  class="active" href="./index.html">Home</a></li>
+                     <li><a  class="active" href="./home.html">Home</a></li>
                      <li><a  href="./quemSomos.html">Quem somos</a></li>
-                     <li><a  href="#">Voluntários</a></li>
-                     <li><a  href="#">Viagens</a></li>
-                     <li><a  href="./cadastro.html">Cadastro</a></li>
+                     <li><a  href="./voluntarios.html">Voluntários</a></li>
+                     <li><a  href="./cadastro.php">Cadastro</a></li>
                      <li><a  id="nav" href="#">Perfil</a></li>
                  </ul>
              </div>
          </div>
     </nav>
     
-    <header class="1-header">
-        
-    </header>
-    <main class="1-main">
 
-    </main>
+
+
+<div class="container">
+    <div class="geral-perfil">
+        <div class="perfil-container">
+            <div class="card-perfil">
+                <form action="" class="perfil">
+                    <div class="foto-perfil">
+                        <img src="./img/fotoPerfil.jpeg" >                      
+                    </div>
+                    <div class="descricao-perfil">
+                        <p>Conte mais sobre você aqui:</p>
+                        <textarea class="descricao-1" type="text"></textarea>
+                    </div>   
+                </div>
+                    
+                    <div class="coluna-2">
+                        <input class="coluna-1" type="text" placeholder="Nome Completo">
+                        <input class="coluna-1" type="text" placeholder="Idade">
+                        <input class="coluna-1" type="text" placeholder="data de nascimento">
+                        <input class="coluna-1" type="text" placeholder="Grau de instrução">
+                        <input class="coluna-1" type="text" placeholder="Idiomas"> 
+                        <input class="coluna-1" type="text" placeholder="Profissão">       
+                    </div>
+                    <div class="coluna-3">
+                        <input class="coluna-1" type="text" placeholder="Endereço">
+                        <input class="coluna-1" type="text" placeholder="Estado"> 
+                        <input class="coluna-1" type="text" placeholder="País">        
+                        <input class="coluna-1" type="text" placeholder="Telefone"> 
+                        <input class="coluna-1" type="text" placeholder="E-mail"> 
+                        <input class="coluna-1" type="text" placeholder="Como nos conheceu?"> 
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 
      <footer class="footer">
         <div class="container">

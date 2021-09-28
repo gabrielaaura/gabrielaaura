@@ -368,16 +368,43 @@ form a:hover{
     left: 50%;  
 }
 
-.popup{
-    width: 350px;
-    height: 280px;
-    padding: 20px 30px;
+.bg-popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     display: none;  
+}
+
+.popup-content{
+    width: 450px;
+    height: 300px;
     background-color: white;
-    box-shadow: 0 4px 20px 0 rgba(3, 106, 129, 0.6);
-    border-radius: 10px;
-    box-sizing: border-box;
-    z-index: 2;
+    border-radius: 4px;
+    align-items: center;
     text-align: center;
+    padding-top: 35px;
+    position: relative;
+}
+
+.x-popup{
+    position: absolute;
+    top: 0;
+    right: 9px;
+}
+
+.x-popup button{
+    border: none;
+    background-color: white;
+}
+
+.x-popup a i {
+    color: #00a2c6;
 }
 
 .icon-popup{
@@ -392,6 +419,7 @@ form a:hover{
     justify-content: center;
     display: inline-block;
 }
+
 
 .icon-popup i.fa {
     font-size: 30px;
@@ -409,6 +437,7 @@ form a:hover{
     font-size: 15px;
     color: #34495e;
     padding: 5px;
+   
 }
 
 .conf-perfil{
@@ -431,4 +460,12 @@ form a:hover{
 .conf-perfil button:hover{
     color: white;
     background-color: #00a2c6;
+} 
+
+.conf-perfil a{
+    color: #00a2c6;
+}
+
+.conf-perfil a:hover{
+    color: white;
 }

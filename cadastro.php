@@ -1,5 +1,11 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +15,28 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="js/cadastro-perfil.js">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body class="cadastrar-js">
     <nav>
         <div class="container">
             <div class="row">
-                 <ul style="float: left;">
-                     <li><img class="logo" src="img/logo.png"></li>
-                 </ul>
-                 <ul style="float: right;">
-                     <li><a  class="active" href="./index.html">Home</a></li>
-                     <li><a  href="./quemSomos.html">Quem somos</a></li>
-                     <li><a  href="#">Voluntários</a></li>
-                     <li><a  href="#">Viagens</a></li>
-                     <li><a  id="nav" href="./cadastro.html">Cadastro</a></li>
-                     <li><a  href="./perfil.html">Perfil</a></li>
-                 </ul>
-             </div>
-         </div>
+                <ul style="float: left;">
+                    <li><img class="logo" src="img/logo.png"></li>
+                </ul>
+                <ul style="float: right;">
+                    <li><a class="active" href="./home.html">Home</a></li>
+                    <li><a href="./quemSomos.html">Quem somos</a></li>
+                    <li><a href="./voluntarios.html">Voluntários</a></li>
+                    <li><a id="nav" href="./cadastro.html">Cadastro</a></li>
+                    <li><a href="./perfil.html">Perfil</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="container-cadastro">
@@ -59,24 +66,24 @@
                                 <i class="fab fa-instagram"></i>
                             </li>
                         </a>
-                        
+
                     </ul>
                 </div>
                 <p class="descricao description-second"> ou utilize sua conta de E-mail:</p>
-                <form class="form">
+                <form class="form" method="POST" action="validaCadastro.php">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
+                        <input name="CadNome" type="text" placeholder="Nome">
                     </label>
 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="E-mail">
+                        <input name="CadEmail" type="email" placeholder="E-mail">
                     </label>
 
-                    <label class="label-input" for=""> 
+                    <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input name="CadSenha" type="text" placeholder="Senha">
                     </label>
 
                     <button class="btn btn-second">Cadastrar</button>
@@ -110,71 +117,96 @@
                                     <i class="fab fa-instagram"></i>
                                 </li>
                             </a>
-                            
+
                         </ul>
                     </div>
                 </div>
                 <p class="descricao description-second"> ou utilize sua conta de E-mail:</p>
-                <form class="form">
+                <form class="form" method="POST" action="validaLogin.php">
+                    <p>
+                        <?php if (isset($_SESSION['loginErro'])) {
+                            echo $_SESSION['loginErro'];
+                            unset($_SESSION['loginErro']);
+                        } ?>
+                    </p>
+                    <p class="text-center text-success">
+                        <?php
+                        if (isset($_SESSION['logindeslogado'])) {
+                            echo $_SESSION['logindeslogado'];
+                            unset($_SESSION['logindeslogado']);
+                        }
+                        ?>
+                    </p>
+                    </p>
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="E-mail">
+                        <input type="email" placeholder="E-mail" name="CadEmail">
                     </label>
 
-                    <label class="label-input" for=""> 
+                    <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="text" placeholder="Senha" name="CadSenha">
                     </label>
 
                     <a class="password" href="#">Esqueceu sua senha?</a>
                     <button class="btn btn-second">Entrar</button>
                 </form>
             </div>
-            
+
         </div>
     </div>
 
-    <div class="popup ">
-        <div class="icon-popup">
-            <i class="fa fa-check"></i>
-        </div>
-        <div class="title-popup">
-               Concluído!
-        </div>
-        <div class="description-popup">
-            Obrigado por se cadastrar em nosso portal!
-            Clique aqui para ser direcionado a página de perfil para
-            que você possa configurá-lo.
-        </div>
-        <div class="conf-perfil">
-            <button id="perfil-popup-btn">
-                Configurar meu perfil
-            </button>
+    <div class="bg-popup">
+        <div class="popup-content">
+            <div class="x-popup">
+                <button>
+                    <a href="#">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="icon-popup">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title-popup">
+                Concluído!
+            </div>
+            <div class="description-popup">
+                Obrigado por se cadastrar em nosso portal!
+                Clique aqui para ser direcionado a página de perfil para
+                que você possa configurá-lo.
+            </div>
+            <div class="conf-perfil">
+                <button id="perfil-popup-btn">
+                    <a href="./perfil.html">
+                        Configurar meu perfil
+                    </a>
+                </button>
+            </div>
         </div>
     </div>
-    
+
 
     <footer class="footer">
         <div class="container">
             <div class="row footer-row">
                 <div class="footer-col">
-                        <img class="footer-logo" src="img/logo-alt.png">
+                    <img class="footer-logo" src="img/logo-alt.png">
                 </div>
                 <div class="footer-col">
                     <div class="atalhos-col">
                         <h4>Atalhos</h4>
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./home.html">Home</a></li>
                             <li><a href="./quemSomos.html">Quem somos</a></li>
-                            <li><a href="#">Voluntários</a></li>
-                            <li><a href="#">Viagens</a></li>
+                            <li><a href="./voluntarios.html">Voluntários</a></li>
                             <li><a href="#nav">Cadastro</a></li>
                             <li><a href="./perfil.html">Perfil</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <div >
+                    <div>
                         <h4>Contato</h4>
                         <div class="contatos">
                             <a href=""> <i class="fab fa-instagram"></i></a>
@@ -188,4 +220,5 @@
     </footer>
     <script src="js/cadastro.js"></script>
 </body>
+
 </html>

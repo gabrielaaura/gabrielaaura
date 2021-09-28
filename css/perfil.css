@@ -1,105 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
 
-:root{
-    --header-heigth:3rem;
-    --nav-width: 324px;
 
-    --font-medium: 500;
-    --font-semi-bold: 600;
-    --font-bold: 700;
-
-    --azul-claro: #09bce4;
-    --azul-escuro: #00a2c6;
-    --cinza-claro:#95a5a6;
-    --cinza-medio:#7f8c8d;
-    --cinza-escuro: #34495e;
-
-    --body-font: font-family: 'Oswald', sans-serif;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size:.938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-
-    --mb-1: .5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-
-    --z-fixed: 100;
-}
-
-@media screen and (min-width: 768px) {
-    :root{
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: .875rem;
-    --smaller-font-size: .813rem;
-    }
-}
-
-*,::before,::after{
-    box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    margin: var(--header-heigth) 0 0 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    background-color: white;
-    color: var(--cinza-medio);
-    line-height: 1.6;
-}
-
-h1,h2,h3,p{
-    margin: 0;
-}
-
-h3{
-    font-weight: var(--font-semi-bold);
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: var(--cinza-escuro);
-}
-
-img{
-    max-width: 100%;
+.perfil-container{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
     height: auto;
-    display: block;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px 0 rgba(3, 106, 129, 0.6);
 }
 
-.section .perfil{
-    padding: 4 rem 0 2rem;
+.geral-perfil{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.section-title{
-    font-size: var(--h1-font-size);
-    color: var(--cinza-escuro);
-    margin-bottom: var(--mb-3);
+.foto-perfil  {
+    width: 150px;
+    height: 150px;  
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    overflow: hidden;
+    position: relative;  
+    margin-bottom: 10px; 
+    padding: 30px; 
+    display: flex;
+    margin: 0 auto 5px;
+}
+
+.foto-perfil  img {
+    width: 100%;  
+    transition: .2s;  
+    position: absolute;
+    top: -35px;
+    left: 0;
+}
+
+.coluna-1{
+    margin-top: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    color: black;
+    height: 30px;
+    border: none;
+    font-size: 17px;
+    background-color: none;
+    border: 1px solid #09bce4;
+    padding: 8px;
+}
+
+
+.card-perfil{
+    border-right: 1px solid #ddd;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
 }
 
-.section-subtitle{
-    display: block;
-    font: var(--small-font-size);
-    color: var(--cinza-medio);
-    text-align: center;
-    font-weight: var(--font-bold);
-    margin-bottom: .25rem;
+.card-perfil h2{
+    color: #00a2c6;
+    margin-top: 20px;
 }
+
+
+.contato-perfil{
+    text-align: center;
+    align-items: center;
+    justify-content: center;  
+    margin: 10px;
+}
+
+.contato-email{
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    
+}
+
+.contato-fone{
+    display: flex;
+    margin: 5px;
+    align-items: center;
+}
+
+.descricao-perfil{  
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    width: 270px;  
+    color: #00a2c6;
+}
+
+.descricao-perfil p {
+    margin-left: 43px;
+}
+
+.descricao-1{
+    width: 309px;
+    height: 250px;
+    border: 1px solid #09bce4;
+    margin-left: 43px;
+    resize:none;
+}
+
+.coluna-2{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 22px;
+}
+
+.coluna-3{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 18px;
+}
+
+/* .dados-pessoais h1{
+    color: #00a2c6;
+    font-size: 28px;
+    text-align: center;
+} */
+
+.descricao-perfil .contato-perfil  {
+    color: #00a2c6;
+}
+
+.card-perfil, .descricao-perfil{
+    padding: 20px;
+}
+/* .footer{
+    position: fixed;
+    bottom: 0;
+} */
