@@ -85,6 +85,7 @@ session_start();
                         <i class="fas fa-lock icon-modify"></i>
                         <input name="CadSenha" type="text" placeholder="Senha">
                     </label>
+                    <button id="modal">aqui</button>
 
                     <button class="btn btn-second">Cadastrar</button>
                 </form>

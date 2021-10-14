@@ -9,5 +9,4 @@ $resultado2 = "INSERT INTO loginvoluntario (CadEmail, CadSenha) values('$cadEmai
 
 $final = mysqli_query($conn, $resultado);
 $final2 = mysqli_query($conn, $resultado2);
-print("Os valores São: " . $cadEmail . $cadNome . $cadSenha);
-?>
+
