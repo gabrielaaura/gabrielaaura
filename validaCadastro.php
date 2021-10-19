@@ -1,4 +1,5 @@
 <?php
+sleep(20);
 include_once('conexao.php');
 $cadNome = $_POST['CadNome'];
 $cadEmail = $_POST['CadEmail'];
@@ -9,4 +10,3 @@ $resultado2 = "INSERT INTO loginvoluntario (CadEmail, CadSenha) values('$cadEmai
 
 $final = mysqli_query($conn, $resultado);
 $final2 = mysqli_query($conn, $resultado2);
-

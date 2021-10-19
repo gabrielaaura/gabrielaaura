@@ -19,6 +19,9 @@
 
 .banner-child{
     z-index: 1;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .banner h1 {
@@ -26,119 +29,122 @@
     max-width: 510px;
     text-align: center;
     color: white;
+    margin-left: 40px;
+    margin-bottom: 8px;
 }
 
-.dropdown-ul {
-  list-style-type: none;
+
+.form-group{
+  background-color: white;
+  display: flex;
+  width: 600px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 4px 0px rgba(12,18,18,0.4);
+
 }
-    
-.dropdown-a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-  }
-  
-    .dropdown-ul {
-    list-style: none;
-    position: relative;
-    text-align: left;
-    padding: 0;
-  }
-  
-  .dropdown-list {
-    float: left;
-  }
-  
-  /* clear'n floats */
-    .dropdown-ul:after {
-    clear: both;
-  }
-  
-  .dropdown-ul:before,
-  .dropdown-ul:after {
-      content: " ";
-      display: table;
-  }
-  
-  .dropdown {
-    position: relative;
-    background: #2B2B2B;
-    background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    text-align: center;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px #0E0E0E;
-    -webkit-box-shadow: 2px 2px 3px #888;
-    -moz-box-shadow: 2px 2px 3px #888;
-    box-shadow: 2px 2px 3px #888;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-  
-  /* prime */
-  .dropdown-ul .dropdown-list .dropdown-a {
-    display: block;
-    padding: 20px 30px;
-    border-right: 1px solid #3D3D3D;
-  }
-  
-  .dropdown-ul .dropdown-list:last-child .dropdown-a {
-    border-right: none;
-  }
-  
-  .dropdown-ul .dropdown-list .dropdown-a:hover {
-    
-    color: #000;
-  }
-  
-  /* subs */
-  ul.sub {
-    position: absolute;
-    z-index: 200;
-    box-shadow: 2px 2px 0 #BEBEBE;
-    width: 35%;
-    display:none;
-  }
-  
-  ul.sub .dropdown-sub-list {
-    float: none;
-    margin: 0;
-  }
-  
-  ul.sub .dropdown-sub-list .dropdown-sub-a {
-    border-bottom: 1px dotted #ccc;
-    border-right: none;
-    color: #000;
-    padding: 15px 30px;
-  }
-  
-  ul.sub .dropdown-sub-list:last-child .dropdown-sub-a {
-    border-bottom: none;
-  }
-  
-  ul.sub .dropdown-sub-list .dropdown-sub-a:hover {
-    color: #000;
-    background: #eeeeee;
-  }
-  
-  /* sub display*/
-  ul.primary .dropdown-sub-list:hover .sub {
-    display: block;
-    background: #fff;
-  }
-  
-  /* keeps the tab background white */
-  ul.primary .dropdown-sub-list:hover .dropdown-sub-a {
-    background: #fff;
-    color: #666;
-    text-shadow: none;
-  }
-  
-  ul.primary .dropdown-sub-list:hover > .dropdown-sub-a{
-    color: #000;
-  }
+
+.dropdown{
+  position:relative;
+  width: 150px;
+  padding-left: 5px;
+  background-color: white;
+  border-right: 2px solid #1da1f2;
+  cursor: pointer;
+}
+
+.default-option{
+  padding: -3px 0px;
+  margin-right: 30px; 
+}
+
+.dropdown-list ul{
+  list-style: none;
+  background-color: white;
+  color: #696969;
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  width: 111px;
+  border-radius: 5px;
+  display: none;  
+}
+
+.dropdown-list ul.active{
+  display: block;
+}
+
+.dropdown-list ul li {
+  /* padding: 10px 10px 10px 20px; */
+  font-size: 16px;
+}
+
+.dropdown-list ul li i{
+  margin-right: 5px;
+}
+
+.dropdown::before{
+  content: "";
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #1d1d1d transparent;
+  position: absolute;
+  right: 19px;
+  top: 46%; 
+}
+
+.dropdown-list ul li::before{
+  content: "";
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: white;
+  position: absolute;
+  bottom: 100% ;
+  right: 20px;
+}
+
+.dropdown-list ul li:hover{
+  background-color: white;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.search{
+  width: 600px;
+  height: 100%;
+}
+
+.search-input{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0 10px;
+  color: black;
+}
+
+.btn{
+  background-color: #fff;
+  width: 50px;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn .fa-search{
+  font-size: 24px;
+  color: #2fa8f3;
+}
+
+.btn .fa-search:hover{
+  font-size: 24px;
+  color: #1da1f2;
+}
+
+input, button:focus{
+  outline: none;
+}
 
   .fa-twitter {
     position: relative;
@@ -148,7 +154,7 @@
   }
 
 
-.gradient {
+ .gradient {
    background: rgba(0, 0, 0, 0.4); 
    background-image: linear-gradient(to top, rgba(0,0,0,.8)0, rgba(0,0,0,0) 60%, rgba(0,0,0,.8) 100%);
    position: absolute;
@@ -156,7 +162,7 @@
    left: 0;
    right: 0;
    bottom: 0;
-}
+} 
 
 .geral{
     padding-top: 40px;

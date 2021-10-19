@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" href="js/cadastro-perfil.js">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -85,9 +83,7 @@ session_start();
                         <i class="fas fa-lock icon-modify"></i>
                         <input name="CadSenha" type="text" placeholder="Senha">
                     </label>
-                    <button id="modal">aqui</button>
-
-                    <button class="btn btn-second">Cadastrar</button>
+                    <button class="btn btn-second" id="modal">Cadastrar</button>
                 </form>
             </div>
         </div>
@@ -159,7 +155,7 @@ session_start();
 
     <div class="bg-popup">
         <div class="popup-content">
-            <div class="x-popup">
+            <div class="x-popup" id="x-popup">
                 <button>
                     <a href="#">
                         <i class="fas fa-times"></i>
@@ -220,6 +216,7 @@ session_start();
         </div>
     </footer>
     <script src="js/cadastro.js"></script>
+    <script src="js/cadastro-perfil.js"></script>
 </body>
 
 </html>
